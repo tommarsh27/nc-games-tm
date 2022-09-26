@@ -5,3 +5,7 @@ https://trello.com/b/uN6bYykJ
 GitHub repository for this project:
 
 https://github.com/tommarsh27/nc-games-tm
+
+README for backend api:
+
+https://github.com/tommarsh27/be-games/blob/main/README.md
