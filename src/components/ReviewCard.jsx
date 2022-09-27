@@ -6,9 +6,11 @@ const ReviewCard = ({ review }) => {
   return (
     <li>
       <Link to={`/reviews/${review_id}`}>
-        <h2>{item_name}</h2>
+        <h2>{review_id}</h2>
 
       </Link>
     </li>
   );
 };
+
+export default ReviewCard;

@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ReviewList from "./pages/reviewList";
+import ReviewList from "./pages/ReviewList";
 
 
 function App() {

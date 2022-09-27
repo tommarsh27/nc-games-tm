@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
-import ReviewCard from "../components/ItemCard";
+import ReviewCard from "../components/ReviewCard";
 import axios from "axios";
 
-const reviewList = () => {
+const ReviewList = () => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
