@@ -8,7 +8,7 @@ const ReviewCard = ({ review }) => {
         <h2>{title}</h2>
         <h3>{designer}</h3>
         <p>{review_body}</p>
-      <Link to={`/reviews/${review_id}`}>
+      <Link to={`${review_id}`}>
         <img className="imgURLs" src={`${review_img_url}`} alt={title}></img>
       </Link>
       <p>Votes - {votes}</p>
