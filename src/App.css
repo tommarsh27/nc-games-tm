@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f2e98c;
 }
 
 .App-logo {
@@ -35,4 +36,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ul {
+  list-style: none;
+}
+
+.navbar {
+  background-color: rgb(234, 203, 29);
+  padding: 20px;
+}
+
+.navlinks {
+    display:inline-flexbox;
+    padding: 50px;
+    font-size: larger;
+    font-weight: 600;
+    text-decoration: solid;
+  }
+
+.imgURLs {
+    height: 200px;
+    width: 300px;
 }
