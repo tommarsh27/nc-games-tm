@@ -20,7 +20,7 @@ const ReviewList = () => {
   return (
     <section>
       <Loading isLoading={isLoading}>
-        <ul>
+        <ul className="ul">
           {reviews.map((review) => {
             return <ReviewCard key={review.review_id} review={review} />;
           })}
