@@ -21,7 +21,6 @@ const ReviewList = () => {
   return (
     <section>
       <Loading isLoading={isLoading}>
-        <CategoryBar />
         <ul className="ul">
           {reviews.map((review) => {
             return <ReviewCard key={review.review_id} review={review} />;
