@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 export default function CategoryBar() {
-  const [categories, setCategories] = useState("");
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     axios
@@ -18,9 +18,11 @@ export default function CategoryBar() {
   
   return (
     <nav className="catbar">
+      <div>
         {categories.map((category) => {
-          return <Link to={`/reviews:${category}`} className="catlinks">{`${category.slug}`}</Link>
+          return <Link key={category.slug} to={`/reviews?category=${category.slug}`} className="catlinks">{category.slug}</Link>
         })}
+        </div>
     </nav>
 )
 };
