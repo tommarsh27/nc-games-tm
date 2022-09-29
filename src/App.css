@@ -44,7 +44,14 @@
 
 .navbar {
   background-color: rgb(234, 203, 29);
-  padding: 20px;
+  padding: 10px;
+}
+
+.catbar {
+  background-color: rgb(247, 157, 89);
+  padding: 10px;
+  border: 1px;
+  border-color: black;
 }
 
 .navlinks {
@@ -53,6 +60,16 @@
     font-size: larger;
     font-weight: 600;
     text-decoration: solid;
+  }
+
+  .catlinks {
+    display:inline-flex;
+    padding: 5px;
+    font-size: larger;
+    font-weight: 600;
+    text-decoration: solid;
+    border: 5px;
+    border-color: black;
   }
 
 .imgURLs {
