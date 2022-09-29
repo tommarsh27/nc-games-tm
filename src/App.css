@@ -49,7 +49,9 @@
 
 .catbar {
   background-color: rgb(247, 157, 89);
-  padding: 5px;
+  padding: 10px;
+  border: 1px;
+  border-color: black;
 }
 
 .navlinks {
@@ -61,11 +63,13 @@
   }
 
   .catlinks {
-    display:inline-flexbox;
-    padding: 30px;
+    display:inline-flex;
+    padding: 5px;
     font-size: larger;
     font-weight: 600;
     text-decoration: solid;
+    border: 5px;
+    border-color: black;
   }
 
 .imgURLs {

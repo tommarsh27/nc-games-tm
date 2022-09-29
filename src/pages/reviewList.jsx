@@ -12,12 +12,9 @@ const ReviewList = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    console.log(slug)
-    let reviewURL = `https://be-games-project-tm.herokuapp.com/api/reviews`
-    if(slug) {reviewURL = reviewURL + `?category=${slug}`}
-    console.log(reviewURL)
+    
     axios
-      .get(reviewURL)
+      .get('https://be-games-project-tm.herokuapp.com/api/reviews', {params: {category: slug}})
       .then(({ data }) => {
         setReviews(data.reviews);
         setIsLoading(false);
