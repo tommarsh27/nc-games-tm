@@ -10,6 +10,9 @@ const ReviewList = () => {
 
   useEffect(() => {
     setIsLoading(true);
+
+    
+
     axios
       .get("https://be-games-project-tm.herokuapp.com/api/reviews")
       .then(({ data }) => {
