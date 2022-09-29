@@ -4,6 +4,7 @@ import Loading from "../components/Loading";
 import ReviewCard from "../components/ReviewCard";
 import axios from "axios";
 import CategoryBar from "../components/CategoryBar";
+import { getReviews } from "../utils/api";
 
 const ReviewList = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -11,11 +12,9 @@ const ReviewList = () => {
   const {slug} = useParams();
   useEffect(() => {
     setIsLoading(true);
-    
-    axios
-      .get('https://be-games-project-tm.herokuapp.com/api/reviews', {params: {category: slug}})
-      .then(({ data }) => {
-        setReviews(data.reviews);
+      getReviews(slug)
+      .then((reviews) => {
+        setReviews(reviews);
         setIsLoading(false);
       });
   }, [slug]);
