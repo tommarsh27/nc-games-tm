@@ -2,7 +2,6 @@ import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 import ReviewCard from "../components/ReviewCard";
-import axios from "axios";
 import CategoryBar from "../components/CategoryBar";
 import { getReviews } from "../utils/api";
 
