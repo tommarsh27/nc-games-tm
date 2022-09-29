@@ -11,3 +11,4 @@ export const getReviews = (category) => {
       return data.reviews;
     });
 }
+

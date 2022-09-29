@@ -21,7 +21,7 @@ export default function CategoryBar() {
       <div>
         <h3>Game categories</h3>
         {categories.map((category) => {
-          return <Link key={category.slug} to={`/reviews/category/${category.slug}`} className="catlinks">{category.slug}</Link>
+          return <Link key={category.slug} to={`/reviews/categories/${category.slug}`} className="catlinks">{category.slug}</Link>
         })}
         </div>
     </nav>
