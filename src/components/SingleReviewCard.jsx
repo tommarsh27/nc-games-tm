@@ -11,7 +11,9 @@ const SingleReviewCard = ({ review }) => {
     patchReviews(review_id, vote).then(() => {
     }).catch(() => {
       setPreVote((currentPreVote => (currentPreVote -= vote)))
-      // send an error
+      return (
+        <p>Oops! Something went wrong!</p>
+      )
     })
   }
   return (
