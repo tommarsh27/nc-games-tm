@@ -21,9 +21,11 @@ const ReviewList = () => {
     <section>
       <Loading isLoading={isLoading}>
         <ul className="ul">
-          {reviews.map((review) => {
-            return <ReviewCard key={review.review_id} review={review} />;
-          })}
+          {reviews.map(review => 
+            <ReviewCard 
+              key={review.review_id} 
+              review={review} 
+            />)}
         </ul>
       </Loading>
     </section>
