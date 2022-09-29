@@ -16,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<ReviewList />} />
+        <Route path="/reviews/category/:slug" element={<ReviewList />} />
         <Route path="*" element={<p>404:not found</p>} />
       </Routes>
       <Footer />
