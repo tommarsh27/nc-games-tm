@@ -5,10 +5,10 @@ const ReviewCard = ({ review }) => {
   const { review_id, title, designer, review_img_url, review_body, votes } = review;
   return (
     <li>
-        <h2>{title}</h2>
-        <h3>{designer}</h3>
+        <h3>{title}</h3>
+        <h4>By {designer}</h4>
         <p>{review_body}</p>
-      <Link to={`/reviews/${review_id}`}>
+      <Link to={`${review_id}`}>
         <img className="imgURLs" src={`${review_img_url}`} alt={title}></img>
       </Link>
       <p>Votes - {votes}</p>
