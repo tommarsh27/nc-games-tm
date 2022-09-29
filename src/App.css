@@ -44,12 +44,25 @@
 
 .navbar {
   background-color: rgb(234, 203, 29);
-  padding: 20px;
+  padding: 10px;
+}
+
+.catbar {
+  background-color: rgb(247, 157, 89);
+  padding: 5px;
 }
 
 .navlinks {
     display:inline-flexbox;
     padding: 50px;
+    font-size: larger;
+    font-weight: 600;
+    text-decoration: solid;
+  }
+
+  .catlinks {
+    display:inline-flexbox;
+    padding: 30px;
     font-size: larger;
     font-weight: 600;
     text-decoration: solid;
