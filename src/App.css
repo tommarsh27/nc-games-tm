@@ -76,3 +76,7 @@
     height: 200px;
     width: 300px;
 }
+
+.commentCard {
+  text-align: left;
+}
