@@ -27,12 +27,8 @@ const ReviewCard = ({ review }) => {
         <img className="imgURLs" src={`${review_img_url}`} alt={title}></img>
       </Link>
       <p>Votes - {votes + preVote}</p>
-      <button onClick={() => handleClick(-1)}>Downvote!</button>
-      <button onClick={() => handleClick(1)}>Upvote!</button>
-      <br></br>
-      <Link to={`/reviews/${review_id}/comments`}>
-        <button>Show Comments</button>
-      </Link>
+      <button className="voteButton" onClick={() => handleClick(-1)}>Downvote!</button>
+      <button className="voteButton" onClick={() => handleClick(1)}>Upvote!</button>
     </li>
   );
 };

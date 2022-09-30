@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 import ReviewCard from "../components/ReviewCard";
 import { getSingleReview } from "../utils/api";
+import CommentList from "./CommentList";
 
 const SingleReview = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +24,7 @@ const SingleReview = () => {
     <section>
       <Loading isLoading={isLoading}>
         <ReviewCard review={review} />
+        <CommentList />
       </Loading>
     </section>
   );
