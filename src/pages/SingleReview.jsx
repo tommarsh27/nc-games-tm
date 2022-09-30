@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 import ReviewCard from "../components/ReviewCard";
 import { getSingleReview } from "../utils/api";
-import CommentList from "./CommentList";
+import CommentList from "../components/CommentList";
 
 const SingleReview = () => {
   const [isLoading, setIsLoading] = useState(false);

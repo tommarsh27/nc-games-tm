@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Loading from "../components/Loading";
-import CommentCard from "../components/CommentCard";
+import Loading from "./Loading";
+import CommentCard from "./CommentCard";
 import { getComments } from "../utils/api";
 import { useParams } from "react-router-dom";
 
