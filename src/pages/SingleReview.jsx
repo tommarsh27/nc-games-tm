@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
-import SingleReviewCard from "../components/SingleReviewCard";
+import ReviewCard from "../components/ReviewCard";
 
 
 const SingleReview = () => {
@@ -26,7 +26,7 @@ const SingleReview = () => {
     return (
         <section>
             <Loading isLoading={isLoading}>
-                <SingleReviewCard review={review} />
+                <ReviewCard review={review} />
             </Loading>
         </section>
     )

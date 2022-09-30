@@ -12,10 +12,19 @@ export const getReviews = (category) => {
     });
 }
 
-export const getComments = (review_id) => {
+export const getSingleReview = (review_id) => {
   return gamesApi
-  .get(`/reviews/${review_id}/comments`)
-  .then(({ data }) => {
-    return data.comments;
+  .get(`/reviews/${review_id}`)
+  .then(({data}) => {
+    return data.review;
   })
 }
+
+export const patchReviews = (review_id, vote) => {
+  return gamesApi.patch(`/reviews/${review_id}`, {inc_votes: vote})
+  .then((res) => {
+    return res.data;
+  });
+};
+
+
