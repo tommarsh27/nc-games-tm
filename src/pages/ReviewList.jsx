@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 import ReviewCard from "../components/ReviewCard";
@@ -8,18 +8,20 @@ import { getReviews } from "../utils/api";
 const ReviewList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [reviews, setReviews] = useState([]);
-  const {slug} = useParams();
+  const { slug } = useParams();
+
   useEffect(() => {
     setIsLoading(true);
-      getReviews(slug)
-      .then((reviews) => {
-        setReviews(reviews);
-        setIsLoading(false);
-      });
+    getReviews(slug)
+    .then((reviews) => {
+      setReviews(reviews);
+      setIsLoading(false);
+    });
   }, [slug]);
+
   return (
     <section>
-        <CategoryBar />
+      <CategoryBar />
       <Loading isLoading={isLoading}>
         <h2>Reviews</h2>
         <ul className="ul">
