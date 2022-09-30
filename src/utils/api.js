@@ -12,6 +12,14 @@ export const getReviews = (category) => {
     });
 }
 
+export const getSingleReview = (review_id) => {
+  return gamesApi
+  .get(`/reviews/${review_id}`)
+  .then(({data}) => {
+    return data.review;
+  })
+}
+
 export const patchReviews = (review_id, vote) => {
   return gamesApi.patch(`/reviews/${review_id}`, {inc_votes: vote})
   .then((res) => {
