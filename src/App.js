@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ReviewList from "./pages/ReviewList";
+import CommentList from "./pages/CommentList";
 import SingleReview from "./pages/SingleReview";
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<ReviewList />} />
         <Route path="/reviews/:review_id" element={<SingleReview />} />
+        <Route path="/reviews/:review_id/comments" element={<CommentList />} />
         <Route path="/reviews/categories/:slug" element={<ReviewList />} />
         <Route path="*" element={<p>404:not found</p>} />
       </Routes>

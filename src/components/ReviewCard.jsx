@@ -11,7 +11,10 @@ const ReviewCard = ({ review }) => {
       <Link to={`/reviews/${review_id}`}>
         <img className="imgURLs" src={`${review_img_url}`} alt={title}></img>
       </Link>
-      <p>Votes - {votes}</p>
+        <p>Votes - {votes}</p>
+      <Link to={`/reviews/${review_id}/comments`}>
+        <button>Show Comments</button>
+      </Link>
     </li>
   );
 };
