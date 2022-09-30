@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import CommentCard from "../components/CommentCard";
 import { getComments } from "../utils/api";
-import ReviewCard from "../components/ReviewCard";
+import { useParams } from "react-router-dom";
 
-const CommentList = ({review}) => {
+const CommentList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [comments, setComments] = useState([]);
-  const {review_id} = review;
+  const { review_id } = useParams();
+
   useEffect(() => {
     setIsLoading(true);
     getComments(review_id).then((comments) => {
+      console.log(comments)
       setComments(comments);
       setIsLoading(false);
     });
@@ -19,12 +21,15 @@ const CommentList = ({review}) => {
   return (
     <section>
       <Loading isLoading={isLoading}>
-        <ReviewCard review={review} />
         <h4>Comments:</h4>
         <ul className="ul">
-          {comments.map((comment) => {
-            return <CommentCard key={comment.comment_id} comment={comment} />;
-          })}
+          {comments.length > 0 ? 
+          comments.map((comment) => {
+            return <CommentCard key={comment.comment_id} comment={comment} />
+            })
+            :
+            <p>This review doesnt have any comments yet!</p>
+        }
         </ul>
       </Loading>
     </section>
